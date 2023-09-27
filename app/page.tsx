@@ -1,3 +1,9 @@
+import Navbar from "./components/ClientNavbar";
+
 export default function Home() {
-  return <main>PetFinder</main>;
+  return (
+    <main>
+      <Navbar />
+    </main>
+  );
 }
