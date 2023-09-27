@@ -20,7 +20,30 @@ const config: Config = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["fantasy"],
+    // themes: ["fantasy"],
+    themes: [
+      {
+        mytheme: {
+          primary: "#d37c45",
+
+          secondary: "#a466d1",
+
+          accent: "#7940b7",
+
+          neutral: "#2d2933",
+
+          "base-100": "#303d50",
+
+          info: "#749ae2",
+
+          success: "#2fcaa9",
+
+          warning: "#a6780c",
+
+          error: "#e54872",
+        },
+      },
+    ],
   },
 };
 export default config;

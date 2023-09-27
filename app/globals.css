@@ -20,3 +20,11 @@
 body {
   font-family: "Poppins" !important;
 }
+
+.btn-primary {
+  @apply bg-primary text-white;
+}
+
+.chat-bubble-success {
+  @apply bg-success text-white;
+}
