@@ -13,11 +13,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        title: ["Roboto Slab"],
+      },
     },
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["winter"],
+    themes: ["fantasy"],
   },
 };
 export default config;
