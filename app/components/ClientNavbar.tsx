@@ -9,7 +9,7 @@ const Clientavbar = () => {
   const router = useRouter();
 
   return (
-    <div className="navbar bg-base-100 border-b-2">
+    <div className="navbar bg-neutral border-b-2">
       <div className="navbar-start">
         <button
           className="btn btn-ghost btn-circle"

@@ -113,9 +113,6 @@ export default function Home() {
         }}
       >
         <div className="grid grid-cols-1 min-h-screen pt-32 mb-20 px-10 w-full gap-20">
-          <h1 className="font-title font-bold text-5xl text-center">
-            It Is That Easy.
-          </h1>
           <div className="h-full flex justify-center">
             <ul className="steps steps-horizontal h-fit md:w-2/3 text-xs">
               <li className="step step-primary">Register</li>
@@ -124,31 +121,44 @@ export default function Home() {
               <li className="step step-primary">Take home your new pal.</li>
             </ul>
           </div>
-          <div className="h-full flex justify-center items-center">
-            <div className="card w-full glass md:w-96 h-fit p-3 py-10 flex flex-col justify-end b-10">
-              <div className="chat chat-start text-xs">
-                <div className="chat-bubble chat-bubble-success">
-                  Hey, I would like to <br />
-                  adopt Jeremy.
-                </div>
-              </div>
-              <div className="chat chat-end text-xs">
-                <div className="chat-bubble chat-bubble-success">
-                  Amazing! When can we set up the meet.
-                </div>
-              </div>
-              <div className="chat chat-start text-xs">
-                <div className="chat-bubble chat-bubble-success">
-                  12:00 Saturday?
-                </div>
-              </div>
-              <div className="chat chat-end text-xs">
-                <div className="chat-bubble chat-bubble-success">Done.</div>
-              </div>
-            </div>
-          </div>
+          <h1 className="font-title font-bold text-5xl text-center">
+            It Is That Easy.
+          </h1>
           <div className="h-fit flex justify-center items-center p-10">
             <button className="btn btn-primary w-80">Lets Start Step 1</button>
+          </div>
+        </div>
+      </div>
+      <div className="min-h-screen bg-base-100 py-20 px-5 md:p-32">
+        <h1 className="text-2xl md:text-7xl font-bold font-title text-center mb-20">
+          Why Choose Us?
+        </h1>
+        <div className="flex gap-10 flex-col">
+          <div className="flex justify-between">
+            <div className="w-1/2 p-5 shadow-lg bg-neutral rounded-lg">
+              <p className="font-normal text-sm">
+                At PetFinder, we're more than just a platform for finding your
+                perfect pet companion. We're your partners in making a
+                difference in the lives of both animals and humans.
+              </p>
+            </div>
+            <div>
+              <button className="btn btn-primary">Find Out More</button>
+            </div>
+          </div>
+          <div className="mx-auto w-1/2 p-5 shadow-lg bg-neutral rounded-lg">
+            <p className="font-normal text-sm">
+              Our team is driven by a shared passion for animals. We prioritize
+              the well-being of our furry friends, ensuring they receive the
+              love and care they deserve before finding their forever homes.
+            </p>
+          </div>
+          <div className="ml-auto w-1/2 shadow-lg bg-neutral rounded-lg p-5">
+            <p className="font-normal text-sm">
+              Join a thriving community of pet lovers and adopters who share
+              your enthusiasm. Our network provides resources, advice, and a
+              support system to help you every step of the way.
+            </p>
           </div>
         </div>
       </div>
