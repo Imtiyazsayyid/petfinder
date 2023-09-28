@@ -11,6 +11,49 @@ const Clientavbar = () => {
   return (
     <div className="navbar bg-neutral border-b-2">
       <div className="navbar-start">
+        <div className="dropdown dropdown-start">
+          <label tabIndex={0} className="btn btn-ghost btn-circle">
+            <div className="indicator">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="inline-block w-5 h-5 stroke-current"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </div>
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu menu-md dropdown-content mt-4 z-[1] p-2 shadow bg-neutral rounded-box w-72"
+          >
+            <li>
+              <Link href={"/"}>Home</Link>
+            </li>
+            <li>
+              <Link href={"/client-about-us"}>About Us</Link>
+            </li>
+            <li>
+              <Link href={"/client-login"}>Contact Us</Link>
+            </li>
+            {!isLoggedIn && (
+              <>
+                <li>
+                  <Link href={"/client-login"}>Login</Link>
+                </li>
+                <li>
+                  <Link href={"/client-register"}>Register</Link>
+                </li>
+              </>
+            )}
+          </ul>
+        </div>
         <button
           className="btn btn-ghost btn-circle"
           onClick={() => router.push("/search-user")}
@@ -45,7 +88,7 @@ const Clientavbar = () => {
             </label>
             <div
               tabIndex={0}
-              className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
+              className="mt-3 z-[1] card card-compact dropdown-content w-72 bg-neutral shadow"
             >
               <div className="card-body">
                 <span className="font-bold text-lg">8 Pets</span>
@@ -60,8 +103,8 @@ const Clientavbar = () => {
           </div>
         )}
 
-        <div className="dropdown dropdown-end mr-4">
-          {isLoggedIn ? (
+        <div className="dropdown dropdown-end md:mr-2">
+          {isLoggedIn && (
             <>
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
@@ -70,55 +113,16 @@ const Clientavbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-72"
               >
                 <li>
-                  <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
-                  </a>
+                  <a>Profile</a>
                 </li>
                 <li>
                   <a>Settings</a>
                 </li>
                 <li>
                   <a>Logout</a>
-                </li>
-              </ul>
-            </>
-          ) : (
-            <>
-              <div className="dropdown dropdown-end">
-                <label
-                  tabIndex={0}
-                  className="btn btn-ghost btn-circle md:mr-3"
-                >
-                  <div className="indicator">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      className="inline-block w-5 h-5 stroke-current"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
-                      ></path>
-                    </svg>
-                  </div>
-                </label>
-              </div>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <Link href={"/client-login"}>Login</Link>
-                </li>
-                <li>
-                  <Link href={"/client-register"}>Register</Link>
                 </li>
               </ul>
             </>
